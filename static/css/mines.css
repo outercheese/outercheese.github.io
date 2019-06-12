@@ -25,13 +25,13 @@
 
 .plsq {
     border: 0.5px solid #666666;
-    width: 27px; 
-    height:27px;
+    width: 33px; 
+    height:33px;
     text-align: center;
     background-color: #DDDDDD;
     background-image: url(../images/minesq.png);
     color: rgb(0,0,0);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: bold;
 }
 
