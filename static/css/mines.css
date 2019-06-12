@@ -1,0 +1,65 @@
+
+/*#game_object {
+    background-color: #0000ff;
+    height: 810px;
+    margin: 20px auto;
+    position: relative;
+    width: 810px;
+}*/
+
+@font-face {
+    /*the Alarm Clock font is by David J. Patterson
+      https://www.dafont.com/alarm-clock.font
+    */
+   font-family: 'alarmClock';
+   src: url('alarmClock.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+.faceStatus{
+    text-align: center;
+    font-size: 36px;
+    border: 14px solid #FFFFFF;
+}
+
+.plsq {
+    border: 0.5px solid #666666;
+    width: 27px; 
+    height:27px;
+    text-align: center;
+    background-color: #DDDDDD;
+    background-image: url(../images/minesq.png);
+    color: rgb(0,0,0);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.tbbr {
+    border: 2px solid black;
+}
+
+.mclocker {
+  border: 7px solid #110000;
+  width: 90px; 
+  height:36px;
+  color: #DD0000;
+  font-family: alarmClock, sans-serif;
+  font-weight: bold;
+  background-color: #330000;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 36px;
+}
+
+/*#board div {
+    background: url("../images/cat_face.jpg") no-repeat scroll 0 0 #ffffff;
+    background-color: #0000FF;
+    cursor: pointer;
+    height: 90px;
+    line-height: 90px;
+    position: absolute;
+    text-align: center;
+    width: 180px;
+    
+}*/
