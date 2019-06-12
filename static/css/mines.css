@@ -30,6 +30,8 @@
     text-align: center;
     background-color: #DDDDDD;
     background-image: url(../images/minesq.png);
+    background-repeat: no-repeat;
+    background-size: auto;
     color: rgb(0,0,0);
     font-size: 18px;
     font-weight: bold;
