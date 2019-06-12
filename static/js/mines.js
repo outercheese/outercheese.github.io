@@ -133,10 +133,12 @@ $(document).ready(function() {
     if (sqarr[clksq].isRevealed == 0){
       if (sqarr[clksq].isFlagged == 1){
         sqarr[clksq].isFlagged = 0;
+        $(clicked_val).css("font-size", "21px");
         $(clicked_val).html("");
       }
       else{
         sqarr[clksq].isFlagged = 1;
+        $(clicked_val).css("font-size", "12px");
         $(clicked_val).html("<b>&#128681</b>");  
       }
     }
@@ -148,12 +150,14 @@ $(document).ready(function() {
     if(!sqarr[rclksq.isRevealed]){
       if (sqarr[rclksq].isMine){
         $(rsq).css("background-image", 'none');
+        $(rsq).css("font-size", "12px");
         $(rsq).html("<b>&#128163;</b>");
       }
       else if (sqarr[rclksq].neighMines > 0){
         $(rsq).css("background-image", 'none');
         $(rsq).css("color", colorArray[sqarr[rclksq].neighMines]);
         //console.log(colorArray[sqarr[rclksq].neighMines]);
+        $(rsq).css("font-size", "21px");
         $(rsq).html("<b>" + sqarr[rclksq].neighMines + "</b>");
         $(rsq).css("background-color", "#DDDDDD");
 
