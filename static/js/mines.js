@@ -59,20 +59,7 @@ $(document).ready(function() {
       sqRcl(this);
     });
     $('#restarter').click(function(){
-       $('#topbar').css("color", "rgb(9,9,9)");
-       $('#topbar').html("<b>Mines</b>");
-       $('#faceStatus').html("&#128578");
-       clockWorker.postMessage({'cmd': 'StopClock'});
-       $('#mclock').html("000");
-       cellrows = 9;
-       cellcols = 12;
-       minecount = 0;
-       mytab = "";
-       sqarr = [];
-       squaresRevealed = 0;
-       gameEnded = 0;
-      buildClock();
-      buildBoard();
+      location.reload();
     });
     for(var sqebl = 0; sqebl < (cellrows * cellcols); sqebl++) {
       var rmin = 0;
@@ -82,7 +69,6 @@ $(document).ready(function() {
         setMine(sqebl);
       }
     }
-
   }
 
   function getNeighbors(gsqu, gcrow, gccol){
