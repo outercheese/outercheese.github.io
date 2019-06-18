@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+lanwanetc
+</title>
+<link rel="stylesheet" href="static/css/clr-ui.min.css" />
+<link rel="stylesheet" href="static/css/clr-icons.min.css" />
+<link rel="stylesheet" type="text/css" href="static/css/mines.css" />
+<script src="static/js/jquery.js"></script>
+<script src="static/js/mines.js"></script>
+<script src="static/js/custom-elements.min.js"></script>
+<script src="static/js/clr-icons.min.js"></script>
+ <script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script> 
+</head>
+<body>
+<div class="main-container">
+    <header class="header header-6">
+        www.greatarea.net 
+    </header>
+    <div class="content-container">
+        <div class="content-area" w3-include-html="mines.html">
+        </div>
+        <nav class="sidenav">
+            <section class="sidenav-content">
+                <a href="http://www.greatarea.net" class="nav-link">
+                    Home
+                </a>
+                <section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Javascript Games</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link active">Mines</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+                <section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </div>
+</div>
+ <script>
+includeHTML();
+</script> 
+</body>
+</html>
