@@ -58,7 +58,7 @@ $(document).ready(function() {
             }
          }
          $('#sudx').append("<div id='sudbutts'></div>");
-         $('#sudbutts').css({position:'absolute', left: '180px', top: '640px', width: '90px', height: '90px' });
+         $('#sudbutts').css({position:'absolute', left: '180px', top: '720px', width: '90px', height: '90px' });
          $('#sudbutts').append("<div id='sudundo'><b>Undo</b></div><p><div id='sudreset'><b>Reset</b></div><div id='sudcontem'><b>Solve</b></div>");
          $('#sudundo').css({position:'absolute', left: '180px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
          $('#sudundo').css("text-align", "center");
