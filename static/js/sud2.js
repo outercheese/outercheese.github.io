@@ -58,14 +58,14 @@ $(document).ready(function() {
             }
          }
          $('#sudx').append("<div id='sudbutts'></div>");
-         $('#sudbutts').css({position:'absolute', left: '30px', top: '640px', width: '90px', height: '90px' });
+         $('#sudbutts').css({position:'absolute', left: '180px', top: '640px', width: '90px', height: '90px' });
          $('#sudbutts').append("<div id='sudundo'><b>Undo</b></div><p><div id='sudreset'><b>Reset</b></div><div id='sudcontem'><b>Solve</b></div>");
          $('#sudundo').css({position:'absolute', left: '30px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
          $('#sudundo').css("text-align", "center");
          $('#sudundo').click(function(){
              undoLast();
          });
-         $('#sudreset').css({position:'absolute', left: '150px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
+         $('#sudreset').css({position:'absolute', left: '300px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
          $('#sudreset').css("text-align", "center");
          $('#sudreset').click(function(){
              sudhistory = [];
@@ -73,7 +73,7 @@ $(document).ready(function() {
              $('#sudx').html("");
              $('#sudx').sudsolv();
          });
-         $('#sudcontem').css({position:'absolute', left: '270px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
+         $('#sudcontem').css({position:'absolute', left: '420px', top: '0px', width: '90px', height: '20px', border: '1px solid black' });
          $('#sudcontem').css("text-align", "center");
          $('#sudcontem').click(function(){
              contemplateSud();
