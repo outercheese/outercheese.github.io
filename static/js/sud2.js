@@ -279,6 +279,6 @@ $(document).ready(function() {
    } 
 
    $('#sudx').sudsolv();
-   $('#logwin').css({position:'absolute', left: '30px', top: '630px', width: '810px', height: '90px', border: 'none' });
+   $('#logwin').css({position:'absolute', left: '30px', top: '900px', width: '810px', height: '90px', border: 'none' });
 });
 
