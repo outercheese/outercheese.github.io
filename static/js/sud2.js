@@ -266,8 +266,7 @@ $(document).ready(function() {
                    chkNumInChunk();
                 }
                 if ((((solsquares.slice()).sort()).reverse()).indexOf(0) < 0){
-                  $('#sudhead').css("color", "green");
-                  $('#sudhead').html("<h2>Solved!</h2><p>");
+                  $('#topbar').css("color", "green");
                    return(0);
                 }
                    undoLast();
