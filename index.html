@@ -10,6 +10,7 @@ www.greatarea.net
 <script src="static/js/jquery.js"></script>
 <script src="static/js/custom-elements.min.js"></script>
 <script src="static/js/clr-icons.min.js"></script>
+<script src="static/js/greatSidenav.js"></script>
 </head>
 <body>
 <div class="main-container">
@@ -21,32 +22,11 @@ www.greatarea.net
       </div>
     </header>
     <div class="content-container">
-        <div class="content-area">
-          <h3>greatarea.net</h3>
+        <div class="content-area" id="mcontent">
+          <h3 id="pagetitle">greatarea.net</h3>
           <p>This page has intentionally been left blank.</p>
         </div>
-        <nav class="sidenav">
-            <section class="sidenav-content">
-                <a href="http://www.greatarea.net" class="nav-link active">
-                    Home
-                </a>
-                <section class="nav-group collapsible">
-                    <input id="tabexample1" type="checkbox">
-                    <label for="tabexample1">Javascript Games</label>
-                    <ul class="nav-list">
-                        <li><a class="nav-link" href="mines-out.html">Mines</a></li>
-                        <li><a class="nav-link" href="sud-out.html">Sudoku Solver</a></li>
-                    </ul>
-                </section>
-                <section class="nav-group">
-                    <input id="tabexample2" type="checkbox">
-                    <label for="tabexample2">Default Nav Element</label>
-                    <ul class="nav-list">
-                        <li><a class="nav-link">Link 1</a></li>
-                        <li><a class="nav-link">Link 2</a></li>
-                    </ul>
-                </section>
-            </section>
+        <nav class="sidenav" id="msidenav">
         </nav>
     </div>
 </div>
