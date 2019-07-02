@@ -1,5 +1,6 @@
 //sudoku solver
 $(document).ready(function() {
+   $('#sud-link').addClass("nav-link-active");
    var sudhistory = [];
    var rollbackTo = 0;
    var solvtally = 0;

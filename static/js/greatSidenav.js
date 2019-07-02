@@ -11,8 +11,8 @@ Home
 <input id="tabexample1" type="checkbox">
 <label for="tabexample1">Javascript Games</label>
 <ul class="nav-list">
-<li><a class="nav-link" href="mines-out.html">Mines</a></li>
-<li><a class="nav-link" href="sud-out.html">Sudoku Solver</a></li>
+<li><a class="nav-link" href="mines-out.html" id="mines-link">Mines</a></li>
+<li><a class="nav-link" href="sud-out.html" id="sud-link">Sudoku Solver</a></li>
 </ul>
 </section>
 <section class="nav-group">
