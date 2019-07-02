@@ -9,7 +9,7 @@ Home
 </a>
 <section class="nav-group collapsible">
 <input id="tabexample1" type="checkbox">
-<label for="tabexample1">Javascript Games</label>
+<label for="tabexample1">jquery lab</label>
 <ul class="nav-list">
 <li><a class="nav-link" href="mines-out.html" id="mines-link">Mines</a></li>
 <li><a class="nav-link" href="sud-out.html" id="sud-link">Sudoku Solver</a></li>
