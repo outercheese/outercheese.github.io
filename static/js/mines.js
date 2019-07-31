@@ -23,6 +23,7 @@ $(document).ready(function() {
        8: "#000000"
     };
   //$('#topbar').css("background-color", "lightgray");
+  $('#mines-link').addClass("active");
   $('#minesb').html("<br><table><tr><td><div id='mclock' class='mclocker'>000</div></td><td><div id='faceStatus' class='faceStatus'>&#128578</div></td><td id='restarter' style='font-weight: bold'>restart</td></tr></table><div id='mboard'></div>");
   $('#mboard').html("<table id='mntab' class='tbbr'></table>");
   $('#mntab').css("border", "1");
