@@ -1,7 +1,3 @@
-/*A simple adaptation of the classic Win95 mine game
-  the Alarm Clock font is by David J. Patterson - https://www.dafont.com/alarm-clock.font
-  CSS from https://clarity.design/ as well as jQuery from https://jquery.com/
-*/
 $(document).ready(function() {
 var mysides = `<section class="sidenav-content">
 <a href="https://www.greatarea.net" class="nav-link">
