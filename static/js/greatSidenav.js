@@ -4,7 +4,7 @@
 */
 $(document).ready(function() {
 var mysides = `<section class="sidenav-content">
-<a href="http://www.greatarea.net" class="nav-link">
+<a href="https://www.greatarea.net" class="nav-link">
 Home
 </a>
 <section class="nav-group collapsible">
