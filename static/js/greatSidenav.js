@@ -13,9 +13,9 @@ Home
 </section>
 <section class="nav-group">
 <input id="tabexample2" type="checkbox">
-<label for="tabexample2">Default Nav Element</label>
+<label for="tabexample2">Vue lab</label>
 <ul class="nav-list">
-<li><a class="nav-link">Link 1</a></li>
+<li><a class="nav-link" href="vue1.html" id="vue1-link">VueLab1</a></li>
 <li><a class="nav-link">Link 2</a></li>
 </ul>
 </section>
