@@ -1,4 +1,4 @@
-//sudoku solver
+//sudoku solver by Steven Mercer
 $(document).ready(function() {
    $('#sud-link').addClass("active");
    var sudhistory = [];
