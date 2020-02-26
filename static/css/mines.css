@@ -29,29 +29,30 @@
     height:27px;
     text-align: center;
     background-color: #DDDDDD;
-    background-image: url(../images/minesq.png);
+    background-image: url(../img/minesq.png);
     background-repeat: no-repeat;
     background-size: auto;
     color: rgb(0,0,0);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: bold;
+    line-height: normal;
 }
 
 .tbbr {
     border: 2px solid black;
+    table-layout: fixed;
 }
 
 .mclocker {
-  border: 7px solid #110000;
   width: 90px; 
-  height:36px;
   color: #DD0000;
   font-family: alarmClock, sans-serif;
   font-weight: bold;
   background-color: #330000;
   text-align: center;
   vertical-align: middle;
-  font-size: 36px;
+  font-size: 45px;
+  line-height: normal;
 }
 
 /*#board div {

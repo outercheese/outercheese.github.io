@@ -1,34 +1,108 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>
-www.greatarea.net
-</title>
-<link rel="stylesheet" href="static/css/clr-ui.min.css" />
-<link rel="stylesheet" href="static/css/clr-icons.min.css" />
-<script src="static/js/jquery.js"></script>
-<script src="static/js/custom-elements.min.js"></script>
-<script src="static/js/clr-icons.min.js"></script>
-<script src="static/js/greatSidenav.js"></script>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Steven Mercer">
+    <title>Great Area</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="./static/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="./static/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="./static/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="./static/img/favicons/manifest.json">
+    <link rel="mask-icon" href="./static/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="./static/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="./static/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+       font-size: 1.125rem;
+       text-anchor: middle;
+       -webkit-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+   </style>
+
+   <!-- Custom styles -->
+   <link rel="stylesheet" type="text/css" href="./static/css/mines.css" />
+   <link rel="stylesheet" type="text/css" href="./static/css/greatarea.css" />
 </head>
-<body>
-<div class="main-container">
-    <header class="header header-6">
-      <div class="branding">
-        <div class="title">
-        www.greatarea.net 
-        </div>
+  <body style="zoom: 1;">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">greatarea.net</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="https://www.greatarea.net">
+              Home <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="myNav('mines');" id="mines-link">
+              Mines game
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="myNav('sud');" id="sud-link">
+              Sudoku Solver
+            </a>
+          </li>
+        </ul>
       </div>
-    </header>
-    <div class="content-container">
-        <div class="content-area" id="mcontent">
-          <h3 id="pagetitle">Welcome to greatarea.net</h3>
-          <p>This is where I teach myself how to build web apps and javascript games.</p>
-        </div>
-        <nav class="sidenav" id="msidenav">
-        </nav>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" >
+    <div id="content-pane">
+    <h3>Welcome</h3>
+      <p class="text-justify">This is greatarea.net - my test site.</p>
     </div>
+    <div id="currpg"></div>
+    </main>
+  </div>
 </div>
-</body>
-</html>
+<script src="./static/js/jquery.js" ></script>
+<script>window.jQuery || document.write('<script src="static/js/jquery.js"><\/script>')</script>
+<script src="./static/js/bootstrap.bundle.min.js" ></script>
+<script src="./static/js/feather.min.js"></script>
+
+<!Global object definitions and nav functionality>
+<script type="text/javascript">
+var clockWorker = new Worker('static/js/mclock.js');
+
+function myNav(ob) {
+  $( "a" ).each(function( index, element ) {
+   $( element ).removeClass( "active" );
+  });
+var nhtml = "<script src=\'static/js/" + ob + "\.js\'></script" + ">";
+$('#currpg').html(nhtml);
+return false;
+}
+</script>
+</body><rmchdummyelement id="dummy_rmch_element"></rmchdummyelement></html>
+
