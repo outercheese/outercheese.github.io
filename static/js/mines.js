@@ -3,29 +3,38 @@
   the Alarm Clock font is by David J. Patterson - https://www.dafont.com/alarm-clock.font
   CSS from https://clarity.design/ as well as jQuery from https://jquery.com/
 */
-  var cellrows = 9;
-  var cellcols = 12;
-  var minecount = 0;
-  var mytab = "";
-  var sqarr = [];
-  var squaresRevealed = 0;
-  var gameEnded = 0;
-  var colorArray = {
-    1: "#0000DD",
-    2: "#00AA00",
-    3: "#DD0000",
-    4: "#000055",
-    5: "#550000",
-    6: "#000000",
-    7: "#000000",
-    8: "#000000"
-  }
+
+$(document).ready(function() {
+   var cellrows = 9;
+   var cellcols = 12;
+   var minecount = 0;
+   var mytab = "";
+   var sqarr = [];
+   var squaresRevealed = 0;
+   var gameEnded = 0;
+   var clockWorker = new Worker('static/js/mclock.js');
+   var colorArray = {
+       1: "#0000DD",
+       2: "#00AA00",
+       3: "#DD0000",
+       4: "#000055",
+       5: "#550000",
+       6: "#000000",
+       7: "#000000",
+       8: "#000000"
+    };
+  //$('#topbar').css("background-color", "lightgray");
+  $('#mines-link').addClass("active");
+  $('#minesb').html("<br><table><tr><td><div id='mclock' class='mclocker'>000</div></td><td><div id='faceStatus' class='faceStatus'>&#128578</div></td><td id='restarter' style='font-weight: bold'>restart</td></tr></table><div id='mboard'></div>");
+  $('#mboard').html("<table id='mntab' class='tbbr'></table>");
+  $('#mntab').css("border", "1");
+
+  buildClock();
+  buildBoard();
 
   function buildClock() {
     clockWorker.onmessage = function (e){
-      $('#mclock').html(e.data.clockValue);
-    };
-    clockWorker.postMessage({'cmd': 'StopClock'});
+      $('#mclock').html(e.data.clockValue);};
     clockWorker.postMessage({'cmd': 'StartClock'});
   }
 
@@ -52,9 +61,8 @@
       sqRcl(this);
     });
     $('#restarter').click(function(){
-      initBoard();
+      location.reload();
     });
-
     for(var sqebl = 0; sqebl < (cellrows * cellcols); sqebl++) {
       var rmin = 0;
       var rmax = 9;
@@ -64,36 +72,6 @@
       }
     }
   }
-
-  function initBoard(){
-    $('#content-pane').html("<h2><div id='topbar'>Mines<b></b></div></h2><div id='gameChoices'><b>left click</b> to reveal a square<br /><b>right-click</b> to flag the square<br />try not to click on mines</div><div id='minesb'>An error has occurred.</div><div id='logwin'></div>");
-
-    $('#minesb').html("<br><table style='table-layout:fixed'><tr><td><div id='mclock' class='mclocker'>000</div></td><td><div id='faceStatus' class='faceStatus'>&#128578</div></td><td><button id='restarter' type='button' class='btn btn-outline-primary'>restart</button></td></tr></table><div id='mboard'></div>");
-    $('#mboard').html("<table id='mntab' class='tbbr'></table>");
-    $('#mntab').css("border", "1");
-    $('#topbar').css("color", "rgb(0,0,0)");
-    $('#topbar').html("<b>Mines</b>");
-
-    cellrows = 9;
-    cellcols = 12;
-    minecount = 0;
-    mytab = "";
-    sqarr = [];
-    squaresRevealed = 0;
-    gameEnded = 0;
-    colorArray = {
-      1: "#0000DD",
-      2: "#00AA00",
-      3: "#DD0000",
-      4: "#000055",
-      5: "#550000",
-      6: "#000000",
-      7: "#000000",
-      8: "#000000"
-    }
-    buildClock();
-    buildBoard();
-  };
 
   function getNeighbors(gsqu, gcrow, gccol){
     var carr = [];
@@ -143,7 +121,7 @@
     if (sqarr[clksq].isRevealed == 0){
       if (sqarr[clksq].isFlagged == 1){
         sqarr[clksq].isFlagged = 0;
-        $(clicked_val).css("font-size", "15px");
+        $(clicked_val).css("font-size", "21px");
         $(clicked_val).html("");
       }
       else{
@@ -166,8 +144,8 @@
       else if (sqarr[rclksq].neighMines > 0){
         $(rsq).css("background-image", 'none');
         $(rsq).css("color", colorArray[sqarr[rclksq].neighMines]);
-        $(rsq).css("font-size", "19px");
-        $(rsq).css("font-family", "Verdana");
+        //console.log(colorArray[sqarr[rclksq].neighMines]);
+        $(rsq).css("font-size", "21px");
         $(rsq).html("<b>" + sqarr[rclksq].neighMines + "</b>");
         $(rsq).css("background-color", "#DDDDDD");
 
@@ -212,7 +190,4 @@
     $('#faceStatus').html("&#128526");
     clockWorker.postMessage({'cmd': 'StopClock'});
   }
-
-$('#mines-link').addClass("active");
-initBoard();
- 
+});
