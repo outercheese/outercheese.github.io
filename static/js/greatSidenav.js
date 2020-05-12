@@ -1,10 +1,6 @@
-/*A simple adaptation of the classic Win95 mine game
-  the Alarm Clock font is by David J. Patterson - https://www.dafont.com/alarm-clock.font
-  CSS from https://clarity.design/ as well as jQuery from https://jquery.com/
-*/
 $(document).ready(function() {
 var mysides = `<section class="sidenav-content">
-<a href="http://www.greatarea.net" class="nav-link">
+<a href="https://www.greatarea.net" class="nav-link">
 Home
 </a>
 <section class="nav-group collapsible">
@@ -17,9 +13,9 @@ Home
 </section>
 <section class="nav-group">
 <input id="tabexample2" type="checkbox">
-<label for="tabexample2">Default Nav Element</label>
+<label for="tabexample2">Vue lab</label>
 <ul class="nav-list">
-<li><a class="nav-link">Link 1</a></li>
+<li><a class="nav-link" href="vue1.html" id="vue1-link">VueLab1</a></li>
 <li><a class="nav-link">Link 2</a></li>
 </ul>
 </section>
