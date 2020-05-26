@@ -5,27 +5,36 @@
 <title>
 www.greatarea.net
 </title>
-<link rel="stylesheet" href="static/css/bootstrap.min.css" />
+<link rel="stylesheet" href="static/css/bootstrap.css" />
 <script src="static/js/jquery.js"></script>
-<script src="static/js/greatSidenav.js"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div class="main-container">
-    <header class="header header-6">
-      <div class="branding">
-        <div class="title">
-        www.greatarea.net
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" rel="author" href="#">GreatArea</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto"><li class="nav-item">
+              <a class="nav-link" href="altindex">this is a page</a>
+            </li><li> <div class="dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+        DropMenu 
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Hooray 1</a>
+        <a class="dropdown-item" href="#">Hooray 2</a>
       </div>
-    </header>
-    <div class="content-container">
-        <div class="content-area" id="mcontent">
-          <h3 id="pagetitle">Welcome to greatarea.net</h3>
-          <p>This is where I teach myself how to build web apps and javascript games.</p>
-        </div>
-        <nav class="sidenav" id="msidenav">
-        </nav>
+      </div>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" href="https://github.com/outercheese">Fork me on Github</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </nav>
 </body>
 </html>
