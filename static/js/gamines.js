@@ -23,7 +23,13 @@ $(document).ready(function() {
        7: "#000000",
        8: "#000000"
     };
-  $('#mycontent').html('<h3>Mines Game</h3>    <div id=\"gameChoices\"><b>left click</b> to reveal a square<br /><b>right-click</b> to flag the square<br />try not to click on mines</div>    <div id="minesb">An error has occurred.</div>    <div id="logwin"></div>');
+  $('#mycontent').html(`<h3>Mines Game</h3>    
+    <div id=\"gameChoices\">
+       <b>left click</b> to reveal a square<br /><b>right-click</b> to flag the square<br />try not to click on mines
+    </div>
+    <div id="minesb">An error has occurred.</div>
+    <div id="logwin"></div>
+  `);
   //$('#topbar').css("background-color", "lightgray");
   $('#mines-link').addClass("active");
   $('#minesb').html("<br><table><tr><td><div id='mclock' class='mclocker'>000</div></td><td><div id='faceStatus' class='faceStatus'>&#128578</div></td><td id='restarter' style='font-weight: bold'>restart</td></tr></table><div id='mboard'></div>");
