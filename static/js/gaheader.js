@@ -5,7 +5,7 @@ $(document).ready(function() {
   $('#ganav').html(`
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" rel="author" href="#">Great Area</a>
+    <a class="navbar-brand" rel="author" href="/">Great Area</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
