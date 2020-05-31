@@ -1,24 +1,34 @@
-/*A simple javascript-based fusker
+/*Javascript encryption demo
   by Steven Mercer
+  crypto-js is from https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js
+  original recipe https://medium.com/@jpatwa/java-encryption-javascript-decryption-using-aes-algorithm-4037ce09a2d3
 */
 
 $(document).ready(function() {
-   var extractedUrls;
-  $('#mycontent').html(`<h3>Fusker</h3>    
+  var extractedUrls;
+  $('#mycontent').html(`<h3>Javascript encryption</h3>
     <div id="gadescrip">
-      <p>A fusker is a way to display a range of images in numerical sequence.<br>
-      Input a URL, with the range of images separated by brackets<br>
-      e.g. <code>https://www.google.com/images/hp[0-3].gif</code> will return a sequence of 4 images:<br>
-      <code>hp0.gif</code>, <code>hp1.gif</code>, <code>hp2.gif</code>, <code>hp3.gif</code></p>
+      <p>This is a PoC of the encryption & hashing capabilities of javascript.<br>
+      Encrypt a message using a password in the first tab, then decrypt in the second tab.<br>
     </div>
     <br>
-    <div class="form-group">
-      <h5>URL to Fusker:</h5>
-      <textarea class="form-control" id="fuskUrl" rows="1" style="max-width: 80%; height: 1.5rem; padding: 0.2rem;">https://www.google.com/images/hp[0-3].gif</textarea>
-      <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem" id="urlSub">Submit</button>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#jsencry">Encryption</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#jsdecry">Decryption</a>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade" id="jsencry">
+        <p>This is the encryption tab content.</p>
+      </div>
+      <div class="tab-pane fade active show" id="jsdecry">
+        <p>This is the decryption tab content.</p>
+      </div>
     </div>
     <div id="logwin"></div>
-
   `);
   //$('#topbar').css("background-color", "lightgray");
   $('#fuskUrl').keydown(function() {
