@@ -19,7 +19,7 @@ $(document).ready(function() {
               </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="gamines.html">Mines</a>
-              <a class="dropdown-item" href="gasud.html">Sudoku Solver</a>
+              <a class="dropdown-item disabled" href="gasud.html">Sudoku Solver</a>
             </div>
             </div>
           </li>
@@ -31,7 +31,7 @@ $(document).ready(function() {
             <div class="dropdown-menu">
             <a class="dropdown-item" href="gafusker.html">Fusker</a>
             <a class="dropdown-item" href="gajsencry.html">Encryption</a>
-            <a class="dropdown-item" href="gastrsav.html">StreamSaver</a>
+            <a class="dropdown-item disabled" href="gastrsav.html">StreamSaver</a>
             </div>
             </div>
           </li>

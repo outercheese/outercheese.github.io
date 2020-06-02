@@ -62,9 +62,9 @@ $(document).ready(function() {
   function encryptThis() {
     plainTxtPwd = $("#plainTxtPwd").val();
     plainTxtMsg = $("#plainTxtMsg").val();
-      if (plainTxtMsg == "") {
+      if (plainTxtPwd == "") {
         alert("Enter an encryption key");
-      } else if (plainTxtPwd == "") {
+      } else if (plainTxtMsg == "") {
         alert("Enter a message to encrypt");
       } else {
         //encTxtMsg = JSON.parse(sjcl.encrypt(plainTxtPwd,plainTxtMsg));
@@ -79,7 +79,15 @@ $(document).ready(function() {
   };
 
   function decryptThis(){
-    $('#decTxtArea').html("<br><h5>Decrypted message</h5>" + sjcl.decrypt($('#decPlainTxtPwd').val(),$('#decObject').val()));
-    //console.log(sjcl.decrypt(plainTxtPwd,encTxtMsg));
+    try{
+      $('#decTxtArea').html("<br><h5>Decrypted message</h5>" + sjcl.decrypt($('#decPlainTxtPwd').val(),$('#decObject').val()));
+      //$('#logwin').html('<script>' + sjcl.decrypt($('#decPlainTxtPwd').val(),$('#decObject').val()) + '</script>');
+      //xconsole.log(sjcl.decrypt(plainTxtPwd,encTxtMsg));
+    }
+    catch(err){
+      $('#decTxtArea').html("<p class=\"text-danger\">ERROR: Unable to decrypt." + "</p>");
+      console.log("zoop - " + err.message);
+    }
+    return false;
   }
 });
