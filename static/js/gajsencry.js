@@ -60,6 +60,7 @@ $(document).ready(function() {
   });
 
   function encryptThis() {
+    $('#decTxtArea').html('');
     plainTxtPwd = $("#plainTxtPwd").val();
     plainTxtMsg = $("#plainTxtMsg").val();
       if (plainTxtPwd == "") {

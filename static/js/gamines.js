@@ -40,7 +40,11 @@ $(document).ready(function() {
 
   function buildClock() {
     clockWorker.onmessage = function (e){
-      $('#mclock').html(e.data.clockValue);};
+      $('#mclock').html(e.data.clockValue);
+      if (e.data.clockValue == '300'){
+        gameOver();
+      }
+    };
     clockWorker.postMessage({'cmd': 'StartClock'});
   }
 
