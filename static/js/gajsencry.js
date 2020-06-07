@@ -9,8 +9,8 @@ var encTxtMsg;
 $(document).ready(function() {
   $('#mycontent').html(`<h3>Javascript encryption</h3>
     <div id="gadescrip">
-      <p>This is a PoC of the encryption & hashing capabilities of javascript.<br>
-      This utilizes the <a href="http://bitwiseshiftleft.github.io/sjcl/">Stanford JavaScript Crypt Library</a><br>
+      <p>This showcases some of the features of the <a href="http://bitwiseshiftleft.github.io/sjcl/">Stanford JavaScript Crypt Library</a><br>
+      They have a swell <a href="http://bitwiseshiftleft.github.io/sjcl/demo/">demo</a> page which explains each parameter
       Encrypt a message using a password in the first tab, then decrypt in the second tab.<br>
     </div>
     <br>
@@ -24,8 +24,56 @@ $(document).ready(function() {
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active show" id="jsencry">
-          Enter password here:
-          <textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="enter the password here">MyWeakPassw0rd</textarea>
+          <br>Modify the following parameters as needed, then Encrypt.<br>
+          <table class="table-bordered">
+            <thead class="thead-light">
+              <tr><th class="shortyBox">Param</th><th class="shortyBox">value</th></tr>
+            </thead>
+            <tr>
+              <td class="shortyBox">password</td>
+              <td class="shortyBox"><textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">MyWeakPassw0rd</textarea></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">iterations</td>
+              <td class="shortyBox"><textarea class="form-control" id="miterations" name="miterations" rows="1" style="padding: 0rem; resize: none;" placeholder="minimum 101 iterations">9999</textarea></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">key size</td>
+              <td> <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios1" value="256" checked="">
+                256
+              </label>
+              </div>
+              <div class="form-check">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios2" value="192">
+                  192
+                </label>
+              </div>
+              <div class="form-check disabled">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios3" value="128">
+                  128
+                </label>
+              </div></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">mode</td>
+              <td> <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="mmode" id="mmode1" value="gcm" checked="">
+                gcm
+              </label>
+              </div>
+              <div class="form-check">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="mmode" id="mmode2" value="ccm">
+                  ccm
+                </label>
+              </div></td>
+            </tr>
+          </table>
           <br>
           Enter message to encrypt:
           <textarea class="form-control" id="plainTxtMsg" name="plainTxtMsg" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="write the message you want to encrypt here">Be sure to drink your Ovaltine</textarea>
@@ -69,11 +117,17 @@ $(document).ready(function() {
         alert("Enter a message to encrypt");
       } else {
         //encTxtMsg = JSON.parse(sjcl.encrypt(plainTxtPwd,plainTxtMsg));
-        encTxtMsg = sjcl.encrypt(plainTxtPwd,plainTxtMsg);
+        let cprams = {
+          mode: $("input[name='mmode']:checked").val(),
+          iter: parseInt($("#miterations").val(), 10),
+          ks: parseInt($("input[name='mkeysize']:checked").val(), 10),
+        }
+        encTxtMsg = sjcl.encrypt(plainTxtPwd,plainTxtMsg,cprams);
         //console.log(JSON.parse(encTxtMsg));
         $('#encTxtArea').html("<br><h5>Encrypted object</h5>" + encTxtMsg);
         $('#decPlainTxtPwd').val(plainTxtPwd);
         $('#decObject').val(encTxtMsg);
+        console.log(JSON.parse(encTxtMsg)["iv"]);
       }
       //$("textarea").val('');
       return false;

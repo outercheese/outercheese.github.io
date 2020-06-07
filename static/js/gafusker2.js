@@ -64,30 +64,7 @@ $(document).ready(function() {
     for (i = urlRange.split('-')[0]; i <= urlRange.split("-")[1]; i++){
       extractedUrls = extractedUrls + ("<p><img class=\"img-fluid\" src=\"" + urlStart + i + urlEnd + "\"></img><br>" + urlStart + i + urlEnd + "</p>");
     }
-    //$('#logwin').html(extractedUrls);
+    $('#logwin').html(extractedUrls);
     return false;
   };
-
-  let myHeaders = new Headers();
-  myHeaders.append('Content-Type', 'image/gif');
-  myHeaders.append('Referrer-Policy', 'unsafe-url');
-  myHeaders.append('referer', 'https://www.lanwanetc.com');
-
-  const myInit = {
-    method: 'GET',
-    mode: 'no-cors',
-    headers: myHeaders,
-    cache: 'default'
-  };
-
-  let myRequest = new Request('https://www.google.com/images/hp2.gif');
-
-  fetch(myRequest, myInit).then(function(response) {
-    if (!response.ok) {
-      console.log(response.status);
-    }
-    let objectURL = URL.createObjectURL(response);
-    $('#logwin').html(extractedUrls + ("<p><img class=\"img-fluid\" src=\"" + objectURL + "\"></img><br>"));
-  });
-
 });
