@@ -75,7 +75,7 @@ $(document).ready(function() {
 
   const myInit = {
     method: 'GET',
-    mode: 'cors',
+    mode: 'no-cors',
     headers: myHeaders,
     cache: 'default'
   };
