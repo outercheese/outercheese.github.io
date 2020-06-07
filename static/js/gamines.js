@@ -1,6 +1,6 @@
-/*A simple adaptation of the classic Win95 minesweeper game
-  by Steven Mercer
-  the Alarm Clock font is by David J. Patterson - https://www.dafont.com/alarm-clock.font
+/* Mines - A simple adaptation of the classic Win95 minesweeper game
+    by Steven Mercer
+   the Alarm Clock font is by David J. Patterson - https://www.dafont.com/alarm-clock.font
 */
 
 $(document).ready(function() {
@@ -114,11 +114,11 @@ $(document).ready(function() {
   function sqLcl(clicked_val) {
     var tmpv = $(clicked_val).attr('id');
     var clksq = tmpv.split("s")[1];
-    if (sqarr[clksq].isMine && !(sqarr[clksq].isFlagged)){
+    if (sqarr[clksq].isMine && !(sqarr[clksq].isFlagged) && !gameEnded){
       $(clicked_val).css("background-color", "rgb(255,0,0)");
       gameOver();
     }
-    else if(!sqarr[clksq].isRevealed && !(sqarr[clksq].isFlagged)){
+    else if(!sqarr[clksq].isRevealed && !(sqarr[clksq].isFlagged) && !(gameEnded)){
       reveal(clicked_val);
     }
   }
@@ -201,5 +201,6 @@ $(document).ready(function() {
     $('#topbar').html("<b>Congratulations!</b>");
     $('#faceStatus').html("&#128526");
     clockWorker.postMessage({'cmd': 'StopClock'});
+    gameEnded = 1;
   }
 });
