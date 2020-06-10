@@ -31,7 +31,7 @@ $(document).ready(function() {
             </thead>
             <tr>
               <td class="shortyBox">password</td>
-              <td class="shortyBox"><textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">MyWeakPassw0rd</textarea></td>
+              <td class="shortyBox"><textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
             </tr>
             <tr>
               <td class="shortyBox">iterations</td>
@@ -75,18 +75,18 @@ $(document).ready(function() {
             </tr>
           </table>
           <br>
-          Enter message to encrypt:
-          <textarea class="form-control" id="plainTxtMsg" name="plainTxtMsg" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="write the message you want to encrypt here">Be sure to drink your Ovaltine</textarea>
+          The message to be encrypted:
+          <textarea class="form-control" id="plainTxtMsg" name="plainTxtMsg" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="the message you want to encrypt here">Be sure to drink your Ovaltine</textarea>
           <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="encBut">Encrypt</button>
           <div id="encTxtArea">
           </div>
       </div>
       <div class="tab-pane fade show" id="jsdecry">
         Enter password here:
-        <textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="enter the password here">MyWeakPassw0rd</textarea>
+        <textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="enter a password here"></textarea>
         <br>
         Object to decrypt:
-        <textarea class="form-control" id="decObject" name="decObject" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="write the message you want to encrypt here"></textarea>
+        <textarea class="form-control" id="decObject" name="decObject" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;"></textarea>
         <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="decBut">Decrypt</button>
         <div id="decTxtArea">
         </div>
