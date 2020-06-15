@@ -10,7 +10,7 @@ $(document).ready(function() {
   $('#mycontent').html(`<h3>Javascript encryption</h3>
     <div id="gadescrip">
       <p>This showcases some of the features of the <a href="http://bitwiseshiftleft.github.io/sjcl/">Stanford JavaScript Crypt Library</a><br>
-      They have a swell <a href="http://bitwiseshiftleft.github.io/sjcl/demo/">demo</a> page which explains each parameter
+      They have a swell <a href="http://bitwiseshiftleft.github.io/sjcl/demo/">demo</a> page which explains each parameter.<br>
       Encrypt a message using a password in the first tab, then decrypt in the second tab.<br>
     </div>
     <br>
