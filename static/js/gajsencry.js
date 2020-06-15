@@ -82,13 +82,61 @@ $(document).ready(function() {
           </div>
       </div>
       <div class="tab-pane fade show" id="jsdecry">
-        Enter password here:
-        <textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;" placeholder="enter a password here"></textarea>
-        <br>
-        Object to decrypt:
-        <textarea class="form-control" id="decObject" name="decObject" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;"></textarea>
-        <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="decBut">Decrypt</button>
-        <div id="decTxtArea">
+          <br>The following fields are autopopulated from the Encrypt funcion, but they can be modified manually as well.<br><br>
+          <table class="table-bordered">
+            <thead class="thead-light">
+              <tr><th class="shortyBox">Param</th><th class="shortyBox">value</th></tr>
+            </thead>
+            <tr>
+              <td class="shortyBox">password</td>
+              <td class="shortyBox"><textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">iterations</td>
+              <td class="shortyBox"><textarea class="form-control" id="diterations" name="diterations" rows="1" style="padding: 0rem; resize: none;" placeholder="minimum 101 iterations">9999</textarea></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">key size</td>
+              <td> <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios1" value="256" checked="">
+                256
+              </label>
+              </div>
+              <div class="form-check">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios2" value="192">
+                  192
+                </label>
+              </div>
+              <div class="form-check disabled">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios3" value="128">
+                  128
+                </label>
+              </div></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">mode</td>
+              <td> <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="dmode" id="dmode1" value="gcm" checked="">
+                gcm
+              </label>
+              </div>
+              <div class="form-check">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="dmode" id="dmode2" value="ccm">
+                  ccm
+                </label>
+              </div></td>
+            </tr>
+          </table>
+          <br>
+          Object to decrypt:
+          <textarea class="form-control" id="decObject" name="decObject" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;"></textarea>
+          <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="decBut">Decrypt</button>
+          <div id="decTxtArea">
         </div>
       </div>
     </div>
