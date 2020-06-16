@@ -24,14 +24,14 @@ $(document).ready(function() {
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active show" id="jsencry">
-          <br>Modify the following parameters as needed, then Encrypt.<br>
+          <br>Modify the following parameters as needed, then Encrypt.<br><br>
           <table class="table-bordered">
             <thead class="thead-light">
               <tr><th class="shortyBox">Param</th><th class="shortyBox">value</th></tr>
             </thead>
             <tr>
               <td class="shortyBox">password</td>
-              <td class="shortyBox"><textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
+              <td class="shortyBox"><textarea class="form-control" id="plainTxtPwd" name="plainTxtPwd" rows="1" cols="45" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
             </tr>
             <tr>
               <td class="shortyBox">iterations</td>
@@ -41,19 +41,19 @@ $(document).ready(function() {
               <td class="shortyBox">key size</td>
               <td> <div class="form-check">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios1" value="256" checked="">
+                <input type="radio" class="form-check-input" name="mkeysize" id="ekeys256" value="256" checked="">
                 256
               </label>
               </div>
               <div class="form-check">
               <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios2" value="192">
+                  <input type="radio" class="form-check-input" name="mkeysize" id="ekeys192" value="192">
                   192
                 </label>
               </div>
               <div class="form-check disabled">
               <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="mkeysize" id="optionsRadios3" value="128">
+                  <input type="radio" class="form-check-input" name="mkeysize" id="ekeys128" value="128">
                   128
                 </label>
               </div></td>
@@ -89,29 +89,29 @@ $(document).ready(function() {
             </thead>
             <tr>
               <td class="shortyBox">password</td>
-              <td class="shortyBox"><textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
+              <td class="shortyBox"><textarea class="form-control" id="decPlainTxtPwd" name="decPlainTxtPwd" rows="1" cols="45" style="padding: 0rem; resize: none;" placeholder="enter a password here">ChangeThisPassw0rd</textarea></td>
             </tr>
             <tr>
               <td class="shortyBox">iterations</td>
-              <td class="shortyBox"><textarea class="form-control" id="diterations" name="diterations" rows="1" style="padding: 0rem; resize: none;" placeholder="minimum 101 iterations">9999</textarea></td>
+              <td class="shortyBox"><textarea class="form-control" id="decIterations" name="diterations" rows="1" style="padding: 0rem; resize: none;" placeholder="minimum 101 iterations">9999</textarea></td>
             </tr>
             <tr>
               <td class="shortyBox">key size</td>
               <td> <div class="form-check">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios1" value="256" checked="">
+                <input type="radio" class="form-check-input" name="dKeysize" id="dkeys256" value="256" checked="">
                 256
               </label>
               </div>
               <div class="form-check">
               <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios2" value="192">
+                  <input type="radio" class="form-check-input" name="dKeysize" id="dkeys192" value="192">
                   192
                 </label>
               </div>
               <div class="form-check disabled">
               <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="dkeysize" id="doptionsRadios3" value="128">
+                  <input type="radio" class="form-check-input" name="dKeysize" id="dkeys128" value="128">
                   128
                 </label>
               </div></td>
@@ -120,21 +120,27 @@ $(document).ready(function() {
               <td class="shortyBox">mode</td>
               <td> <div class="form-check">
               <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="dmode" id="dmode1" value="gcm" checked="">
+                <input type="radio" class="form-check-input" name="dMode" id="dmodegcm" value="gcm" checked="">
                 gcm
               </label>
               </div>
               <div class="form-check">
               <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="dmode" id="dmode2" value="ccm">
+                  <input type="radio" class="form-check-input" name="dMode" id="dmodeccm" value="ccm">
                   ccm
                 </label>
               </div></td>
             </tr>
+            <tr>
+              <td class="shortyBox">iv</td>
+              <td class="shortyBox"><textarea class="form-control" id="decIv" name="decIv" rows="1" style="padding: 0rem; resize: none;" placeholder="initialization vector"></textarea></td>
+            </tr>
+            <tr>
+              <td class="shortyBox">crypt text</td>
+              <td class="shortyBox"><textarea class="form-control" id="cryptMsg" name="cryptMsg" rows="1" style="padding: 0rem; resize: none;" placeholder="encrypted text"></textarea></td>
+            </tr>
           </table>
           <br>
-          Object to decrypt:
-          <textarea class="form-control" id="decObject" name="decObject" rows="1" style="max-width: 90%; height: 1.5rem; padding: 0rem; resize: none; margin-bottom: 0.2rem;"></textarea>
           <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="decBut">Decrypt</button>
           <div id="decTxtArea">
         </div>
@@ -159,37 +165,56 @@ $(document).ready(function() {
     $('#decTxtArea').html('');
     plainTxtPwd = $("#plainTxtPwd").val();
     plainTxtMsg = $("#plainTxtMsg").val();
-      if (plainTxtPwd == "") {
-        alert("Enter an encryption key");
-      } else if (plainTxtMsg == "") {
-        alert("Enter a message to encrypt");
-      } else {
-        //encTxtMsg = JSON.parse(sjcl.encrypt(plainTxtPwd,plainTxtMsg));
-        let cprams = {
-          mode: $("input[name='mmode']:checked").val(),
-          iter: parseInt($("#miterations").val(), 10),
-          ks: parseInt($("input[name='mkeysize']:checked").val(), 10),
-        }
-        encTxtMsg = sjcl.encrypt(plainTxtPwd,plainTxtMsg,cprams);
-        //console.log(JSON.parse(encTxtMsg));
-        $('#encTxtArea').html("<br><h5>Encrypted object</h5>" + encTxtMsg);
-        $('#decPlainTxtPwd').val(plainTxtPwd);
-        $('#decObject').val(encTxtMsg);
-        console.log(JSON.parse(encTxtMsg)["iv"]);
+    if (plainTxtPwd == "") {
+      alert("Enter an encryption key");
+    } else if (plainTxtMsg == "") {
+      alert("Enter a message to encrypt");
+    } else {
+      //encTxtMsg = JSON.parse(sjcl.encrypt(plainTxtPwd,plainTxtMsg));
+      let cprams = {
+        mode: $("input[name='mmode']:checked").val(),
+        iter: parseInt($("#miterations").val(), 10),
+        ks: parseInt($("input[name='mkeysize']:checked").val(), 10),
       }
-      //$("textarea").val('');
-      return false;
+      encTxtMsg = sjcl.encrypt(plainTxtPwd,plainTxtMsg,cprams);
+      //console.log(JSON.parse(encTxtMsg));
+      $('#encTxtArea').html("<br><h5>Encrypted object</h5>" + encTxtMsg);
+      $('#decPlainTxtPwd').val(plainTxtPwd);
+      $('#decIterations').val(JSON.parse(encTxtMsg)["iter"]);
+      $("#dkeys" + JSON.parse(encTxtMsg)["ks"]).prop("checked", true);
+      $("#dmode" + JSON.parse(encTxtMsg)["mode"]).prop("checked", true);
+      $('#decIv').val(JSON.parse(encTxtMsg)["iv"]);
+      $('#cryptMsg').val(JSON.parse(encTxtMsg)["ct"]);
+      //$('#decObject').val(encTxtMsg);
+      //console.log(JSON.parse(encTxtMsg)["iv"]);
+    }
+    //$("textarea").val('');
+    return false;
   };
 
   function decryptThis(){
+    decPlainTxtPwd = $("#decPlainTxtPwd").val();
+    cryptMsg = $("#cryptMsg").val();
+    decIv = $("#decIv");
+    decMode = $("input[name='dMode']:checked").val();
+    let dprams = {
+      iv: $('#decIv').val(),
+      iter: parseInt($("#decIterations").val(), 10),
+      ks: parseInt($("input[name='dKeysize']:checked").val(), 10),
+      mode: decMode,
+      ct: cryptMsg,
+    }
+    if (decPlainTxtPwd == "" || cryptMsg == "" || decIv == ""){
+      alert("fill in yo fields");
+    }
     try{
-      $('#decTxtArea').html("<br><h5>Decrypted message</h5>" + sjcl.decrypt($('#decPlainTxtPwd').val(),$('#decObject').val()));
+      $('#decTxtArea').html("<br><h5>Decrypted message</h5>" + sjcl.decrypt(decPlainTxtPwd,JSON.stringify(dprams)));
       //$('#logwin').html('<script>' + sjcl.decrypt($('#decPlainTxtPwd').val(),$('#decObject').val()) + '</script>');
       //xconsole.log(sjcl.decrypt(plainTxtPwd,encTxtMsg));
     }
     catch(err){
       $('#decTxtArea').html("<p class=\"text-danger\">ERROR: Unable to decrypt." + "</p>");
-      console.log("zoop - " + err.message);
+      console.log("zoop - " + err.message + JSON.stringify(dprams));
     }
     return false;
   }
