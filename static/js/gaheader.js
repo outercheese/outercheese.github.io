@@ -19,7 +19,7 @@ $(document).ready(function() {
               </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="gamines.html">Mines</a>
-              <a class="dropdown-item disabled" href="gasud.html">Sudoku Solver</a>
+              <a class="dropdown-item" href="gasud.html">Sudoku Solver</a>
             </div>
             </div>
           </li>
