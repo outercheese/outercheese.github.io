@@ -53,7 +53,7 @@ $(document).ready(function() {
       data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
     })
     .done(function(){
-      $('#mydiv').html('The board will begin attempting to solve the sudoku once 24 squares have been assigned values.<p>You will be able to assign different values even if a possible solution has been provided.<p>');
+      $('#mydiv').html('The board will begin attempting to solve the sudoku once 24 of the squares have been assigned values.<p>It will continue to recalculate each time the value of a square is modified.<p>');
     })
     .fail(function(){
       $('#mydiv').html('an error has occurred');
