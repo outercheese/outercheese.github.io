@@ -36,3 +36,8 @@
 .table-bordered td{
   border: 0.05rem solid #000000;
 }
+
+.table td {
+  line-height: 1;
+  vertical-align: middle;
+}
