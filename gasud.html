@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>
+www.greatarea.net
+</title>
+<link rel="stylesheet" href="static/css/bootstrap.css" />
+<link rel="stylesheet" href="static/css/sud.css" />
+<script src="static/js/jquery.js"></script>
+<script src="static/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/popper.min.js"></script>
+<script lang="javascript" src="static/js/xlsx.full.min.js"></script>
+<script src="static/js/sud3.js"></script>
+</head>
+<body>
+  <div id="ganav">
+  </div>
+  <div class="py-5">
+    <div class="container page-content" id="mycontent">
+        <div id="mydiv">loading...</div>
+    <script>
+    $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
+      type: 'POST',  // http method
+      data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
+    })
+    .done(function(){
+      $('#mydiv').html('Sudoku Solver<p><p>');
+    })
+    .fail(function(){
+      $('#mydiv').html('an error has occurred');
+    });
+    </script>
+    </div>
+    <div id="ohno" hidden></div>
+    <div id="sudboard">
+    <table class="table table-bordered table-sm tabouter">
+      <tbody id="tbod">
+      </tbody>
+    </table>
+    </div>
+    <div id="drop">
+      <pre>
++---------------------------------------------------------+
+|  Drop an xlsx file <b>here</b>.                                |
+|  Cell V12 should contain comma-separated square:value   |
++---------------------------------------------------------+
+      </pre>
+    </div>
+          <p> Please enable javascript</p>
+    </div>
+  </div>
+  <div class="py-5 border-top">
+    <div class="container"> 
+      <div class="row">
+        <div class="col-sm text-right">
+          <p></p>  
+          <p>
+            Powered by <a href="https://bootswatch.com/lux/">Bootswatch Lux theme</a> and <a href="https://pages.github.com">GitHub Pages</a>
+          </p>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <script src="static/js/gaheader.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
