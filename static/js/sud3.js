@@ -186,7 +186,7 @@ function recalcBoard() {
       }
     }
   }
-  if (Object.keys(propobj).length > 23){
+  if (Object.keys(propobj).length > 22){
     solveSud();
   }
 }
