@@ -1,6 +1,11 @@
+/* Sudoku Solver - solves sudoku puzzles.
+    by Steven Mercer
+    The Javascript front end makes calls to a Python script hosted at repl.it
+    There is also drag-and-drop functionality for an xcel file, but I've turned that off for now.
+*/
+
 var propval;
 
-//I really need to just take the next three variables and plunk them into one big object
 //propobj is an object containing key:value pairs for known-solved squares
 var propobj = {};
 //couldbe is an array, each element of which is an array itself, of all possible vaules of a square
@@ -48,7 +53,7 @@ $(document).ready(function() {
       data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
     })
     .done(function(){
-      $('#mydiv').html('Sudoku Solver<p><p>');
+      $('#mydiv').html('The board will begin attempting to solve the sudoku once 24 squares have been assigned values.<p>You will be able to assign different values even if a possible solution has been provided.<p>');
     })
     .fail(function(){
       $('#mydiv').html('an error has occurred');
