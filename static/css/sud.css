@@ -16,3 +16,37 @@
     width: 180px;
     
 }*/
+.tabouter {
+    border: 0.05rem solid #000000;
+    width: 450px; 
+    height: 450px;
+}
+.sudouter {
+    width: 50px; 
+    height: 50px;
+    color: rgb(9, 9, 9);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+.divouter {
+    display: flex;
+    align-items: center;
+}
+
+.sol-cell {
+  border: 0.05rem solid #000000;
+  background-color: #EEEEEE;
+}
+
+.sqvalenter {
+  font-weight: bold;
+  background-color: #EEEEEE;
+}
+
+.sqVlSel {
+  font-size: 1.25em;
+  padding: 3px;
+}
+
