@@ -32,6 +32,29 @@ for (cb = 0; cb < 81; cb++){
 var cb = "banana"
 $(document).ready(function() {
   /* initialize board */
+
+  $('#mycontent').html(`<h3>Sudoku Solver</h3>  
+        <div id="mydiv">loading...</div>
+        <div id="ohno" hidden></div>
+        <div id="sudboard">
+        <table class="table table-bordered table-sm tabouter">
+          <tbody id="tbod">
+          </tbody>
+        </table>
+        </div>
+    `);
+    $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
+      type: 'POST',  // http method
+      data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
+    })
+    .done(function(){
+      $('#mydiv').html('Sudoku Solver<p><p>');
+    })
+    .fail(function(){
+      $('#mydiv').html('an error has occurred');
+    });
+  
+  
   $('#tbod').html("");
   for (i = 0; i < 9; i++) {
     $('#tbod').append('<tr id="tre' + i + '">');
