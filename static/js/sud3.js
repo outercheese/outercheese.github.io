@@ -49,8 +49,8 @@ $(document).ready(function() {
         </div>
         <div>
           <button type="button" class="btn btn-outline-dark btn-sm" onclick="hardReset()">Reset</button><p><p>
-          <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve today's New York Times hard puzzle</button><br>
-          <a href="https://www.nytimes.com/puzzles/sudoku/hard" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">View today's New York Times hard puzzle in a new tab</a>
+          <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve New York Times hard puzzle</button><br>
+          <a href="https://www.nytimes.com/puzzles/sudoku/hard" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">View New York Times hard puzzle in a new tab</a>
         </div>
     `);
     $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
