@@ -49,7 +49,7 @@ $(document).ready(function() {
         </div>
         <div>
           <button type="button" class="btn btn-outline-dark btn-sm" onclick="hardReset()">Reset</button><p><p>
-          <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve New York Times hard puzzle</button><br>
+          <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve New York Times hard puzzle</button><br><br>
           <a href="https://www.nytimes.com/puzzles/sudoku/hard" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">View New York Times hard puzzle in a new tab</a>
         </div>
     `);
