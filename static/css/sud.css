@@ -2,11 +2,13 @@
   color: #337ab7;
   font-size: 0.75em
 }
+
 .tabouter {
     background-image: url(../images/sudgrid.jpg);
     width: 450px; 
     height: 450px;
 }
+
 .sudouter {
     border: 0.05rem solid #000000;
     width: 50px; 
