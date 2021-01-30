@@ -1,3 +1,7 @@
+.a-out {
+  color: #337ab7;
+  font-size: 0.75em
+}
 .tabouter {
     background-image: url(../images/sudgrid.jpg);
     width: 450px; 
@@ -43,7 +47,3 @@
   vertical-align: middle;
 }
 
-.a-out {
-  color: #337ab7;
-  font-size: 0.75em
-}
