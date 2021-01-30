@@ -50,7 +50,7 @@ $(document).ready(function() {
         <div>
           <button type="button" class="btn btn-outline-dark btn-sm" onclick="hardReset()">Reset</button><p><p>
           <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve today's New York Times hard puzzle</button><br>
-          <a href="https://www.nytimes.com/puzzles/sudoku/hard" target="_blank" rel="noopener noreferrer" class="a-out"> -> open NYT Hard Sudoku puzzle in new tab</a>
+          <a href="https://www.nytimes.com/puzzles/sudoku/hard" target="_blank" rel="noopener noreferrer" class="a-out">open NYT Hard Sudoku puzzle in new tab</a>
         </div>
     `);
     $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
