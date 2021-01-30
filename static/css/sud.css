@@ -42,3 +42,8 @@
   line-height: 1;
   vertical-align: middle;
 }
+
+.a-out {
+  color: #337ab7;
+  font-size: 0.75em
+}
