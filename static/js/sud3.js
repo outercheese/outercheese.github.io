@@ -200,6 +200,44 @@ function resetBoard() {
   $('.sudouter').removeClass("bad-cell");
 }
 
+function hardReset() {
+  propobj = {}
+  resetBoard()
+  recalcBoard()
+}
+
+function solveNYThard(){
+  hardReset()
+  //$('#misctxt').html('solving...');
+    $.ajax({
+      type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+      url         : 'https://shamefulcomplicateddowngrade.outercheese.repl.co/NYThard', // the url where we want to POST
+      dataType    : 'json', // what type of data do we expect back from the server
+      //encode      : true
+  })
+  .done(function(data) {
+    // log data to the console so we can see
+    // console.log(data); 
+    if (Object.keys(data[0]).length > 0){
+      //$('#misctxt').html("Solved!")
+      //$('#misctxt').html(data[0]["NYThard"])
+      nytharr = data[0]["NYThard"].split(',')
+      $.each(nytharr, function( index, value ) {
+        if (value > 0){
+          propobj[index] = parseInt(value);
+          resetBoard();
+          recalcBoard();
+        }
+      });      
+      console.log(nytharr)
+      //console.log(propobj)
+    }
+    else{
+      $('#ohno').html("an error occurred.")
+    }
+  });
+}
+
 function clrSq( sqev ){
   delete propobj[sqev.data.setS];
   resetBoard();
