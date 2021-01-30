@@ -47,8 +47,10 @@ $(document).ready(function() {
           </tbody>
         </table>
         </div>
-        <button type="button" class="btn btn-outline-dark btn-sm" onclick="hardReset()">Reset</button><p>
-        <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve today's NYT hard puzzle</button>
+        <div>
+          <button type="button" class="btn btn-outline-dark btn-sm" onclick="hardReset()">Reset</button><p>
+          <button type="button" class="btn btn-outline-dark btn-sm" onclick="solveNYThard()">Solve today's NYT hard puzzle</button>
+        </div>
     `);
     $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
       type: 'POST',  // http method
