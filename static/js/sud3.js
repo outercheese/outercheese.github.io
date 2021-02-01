@@ -39,7 +39,7 @@ $(document).ready(function() {
   /* initialize board */
 
   $('#mycontent').html(`<h3>Sudoku Solver</h3>  
-        <div id="mydiv">loading...</div>
+        <div id="mydiv">Waking up repl.it, please wait...</div>
         <div id="ohno" hidden></div>
         <div id="sudboard">
         <table class="table table-bordered table-sm tabouter">
