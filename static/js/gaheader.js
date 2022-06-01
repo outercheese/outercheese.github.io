@@ -29,7 +29,7 @@ $(document).ready(function() {
                 Tools 
               </a> 
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="gafusker.html">Fusker</a>
+            <a class="dropdown-item" href="gafusker.html">Gallerizer</a>
             <a class="dropdown-item" href="gajsencry.html">Encryption</a>
             <a class="dropdown-item disabled" href="gastrsav.html">StreamSaver</a>
             </div>
