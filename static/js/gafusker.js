@@ -1,12 +1,12 @@
-/*A simple javascript-based fusker
+/*A simple javascript gallerizer
   by Steven Mercer
 */
 
 $(document).ready(function() {
    var extractedUrls;
-  $('#mycontent').html(`<h3>Fusker</h3>    
+  $('#mycontent').html(`<h3>Gallerizer</h3>    
     <div id="gadescrip">
-      <p>A fusker is a way to display a range of images in numerical sequence.<br>
+      <p>The gallerizer displays a range of images in numerical sequence.<br>
       Input a URL, with the range of images separated by brackets<br>
       e.g. <code>https://www.google.com/images/hp[0-3].gif</code> will return a sequence of 4 images:<br>
       <code>hp0.gif</code>, <code>hp1.gif</code>, <code>hp2.gif</code>, <code>hp3.gif</code></p>
