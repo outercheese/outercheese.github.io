@@ -13,7 +13,7 @@ $(document).ready(function() {
     </div>
     <br>
     <div class="form-group">
-      <h5 style="margin-bottom: 0.05rem;">URL to Fusker:</h5>
+      <h5 style="margin-bottom: 0.05rem;">URL to gallerize:</h5>
       <textarea class="form-control" id="fuskUrl" name="fuskUrl" rows="1" style="max-width: 80%; height: 1.5rem; padding: 0.2rem; resize: none; margin-bottom: 0.2rem;" placeholder="e.g. https://www.google.com/images/hp[0-3].gif"></textarea>
       <button type="button" class="btn btn-primary" style="height: 1.0rem; line-height: 0rem; padding-left: 0.5rem; padding-right: 0.5rem;" id="urlSub">Submit</button>
     </div>
