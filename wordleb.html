@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Mytest</title>
+    <link rel="stylesheet" href="static/css/bootstrap-slate.min.css">
+    <link rel="stylesheet" href="static/css/wordleb.css">
+  </head>
+  <body>
+  Click on a suggested word on the left, then update letters on the right.
+  <div class="container col-sm-4">
+    <div class="row">
+      <div class="col-sm-2" id="suggestions">
+        <div class="nextword" id="suggested" data-guess="cares">cares</div>
+        <div class="nextword" id="suggested" data-guess="tares">tares</div>
+        <div class="nextword" id="suggested" data-guess="cores">cores</div>
+        <div class="nextword" id="suggested" data-guess="bores">bores</div>
+      </div>
+      <div class="col-sm-8" id="guesses">
+      </div>
+    </div>
+  </div>
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <! you don't need popper anymore, it's included with boostrap as of 5.1>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/sql-wasm.js"></script>
+    <script src="static/js/wordleb.js"></script>
+    <script>
+      $( ".nextword" ).on( "click", function() {
+        choseWord( $( this ).text() );
+      });
+    </script>
+  </body>
+</html>
