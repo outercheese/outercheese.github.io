@@ -13,8 +13,8 @@ $(document).ready(function() {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li>
-            <div class="dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <div class="dropdown show">
+              <a class="btn nav-link dropdown-toggle" data-toggle="dropdown">
                 Games 
               </a>
             <div class="dropdown-menu">
@@ -24,8 +24,8 @@ $(document).ready(function() {
             </div>
           </li>
           <li>
-            <div class="dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <div class="dropdown show">
+              <a class="btn nav-link dropdown-toggle" data-toggle="dropdown">
                 Tools 
               </a> 
             <div class="dropdown-menu">
