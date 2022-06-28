@@ -1,0 +1,80 @@
+.atable {
+    border: 0px;
+}
+
+.nextword {
+    border: 0.02rem solid #FFFFFF;
+    color: rgb(208,208,208);
+    height: 24px; 
+    line-height: 1em; 
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.unanswered {
+    border: 0.2rem solid #000000;
+    width: 50px; 
+    height: 50px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 42px; 
+    font-size: 2em; 
+    font-weight: bold;
+    background-color: white;
+}
+
+.wrongPos {
+    border: 0.2rem solid #000000;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 208, 9);
+    text-align: center;
+    line-height: 43px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.wPosAlt {
+    border: 0.2rem solid #000000;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 208, 9);
+    text-align: center;
+    line-height: 43px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+.notInWord {
+    border: 0.2rem solid #000000;
+    width: 50px;
+    height: 50px;
+    color: rgb(128, 128, 128);
+    background-color: black;
+    text-align: center;
+    line-height: 43px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.solved {
+    border: 0.2rem solid #000000;
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: green;
+    text-align: center;
+    line-height: 43px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.selBox{
+    height:1.8em;
+    width: 9em;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
