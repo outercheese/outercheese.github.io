@@ -53,7 +53,7 @@ $(document).ready(function() {
           <a href="https://www.nytimes.com/puzzles/sudoku/hard" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">View New York Times hard puzzle in a new tab</a>
         </div>
     `);
-    $.ajax('hhttps://67a6181c-1082-4395-8810-88f8a4792c11-00-13zvhrfbkbdks.spock.replit.dev/wakey', {
+    $.ajax('https://67a6181c-1082-4395-8810-88f8a4792c11-00-13zvhrfbkbdks.spock.replit.dev/wakey', {
       type: 'POST',  // http method
       data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
     })
