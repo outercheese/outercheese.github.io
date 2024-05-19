@@ -279,7 +279,7 @@ function solveSud(){
   // process the form
   $.ajax({
       type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-      url         : 'https://shamefulcomplicateddowngrade.outercheese.repl.co/testin', // the url where we want to POST
+      url         : 'https://67a6181c-1082-4395-8810-88f8a4792c11-00-13zvhrfbkbdks.spock.replit.dev/testin', // the url where we want to POST
       data        : formData, // our data object
       dataType    : 'json', // what type of data do we expect back from the server
       //encode      : true
