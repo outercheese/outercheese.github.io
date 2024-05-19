@@ -1,6 +1,6 @@
 /* Sudoku Solver - solves sudoku puzzles.
     by Steven Mercer
-    The Javascript front end makes calls to a Python script hosted at repl.it
+    The Javascript front end makes calls to a Python script hosted at replit.com
     There is also drag-and-drop functionality for an xcel file, but I've turned that off for now.
 */
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
   /* initialize board */
 
   $('#mycontent').html(`<h3>Sudoku Solver</h3>  
-        <div id="mydiv">Waking up repl.it, please wait...</div>
+        <div id="mydiv">Waking up replit, please wait...</div>
         <div id="ohno" hidden></div>
         <div id="sudboard">
         <table class="table table-bordered table-sm tabouter">
@@ -53,7 +53,7 @@ $(document).ready(function() {
           <a href="https://www.nytimes.com/puzzles/sudoku/hard" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">View New York Times hard puzzle in a new tab</a>
         </div>
     `);
-    $.ajax('https://shamefulcomplicateddowngrade.outercheese.repl.co/wakey', {
+    $.ajax('hhttps://67a6181c-1082-4395-8810-88f8a4792c11-00-13zvhrfbkbdks.spock.replit.dev/wakey', {
       type: 'POST',  // http method
       data: { 'name':'Steven Mercer', 'time':'9am' }  // data to submit
     })
